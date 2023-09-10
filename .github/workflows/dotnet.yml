@@ -22,6 +22,8 @@ jobs:
         dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore ./Source
+    - name: Restore tests dependencies
+      run: dotnet restore ./Tests
     - name: Build Console
       run: dotnet build ./Source --no-restore 
     - name: Build Tests
